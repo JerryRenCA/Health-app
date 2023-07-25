@@ -11,17 +11,9 @@ interface GetUserArgs extends GetUsersArgs {
 
 const prisma = new PrismaClient();
 
-export const getUsers = async ({ info }: GetUsersArgs) => {
-  const extractedSelections = extractSelections(info);
-  const postIncluded = extractedSelections.includes("medications");
-  // if (postIncluded)
-  //   return await prisma.user.findMany({ include: { medications: true } });
-  return await prisma.user.findMany();
-};
-
 export const getUser = async ({ id, info }: GetUserArgs) => {
   const extractedSelections = extractSelections(info);
-  const postIncluded = extractedSelections.includes("medications");
+  // const postIncluded = extractedSelections.includes("medications");
   // if (postIncluded)
   //   return await prisma.user.findUnique({
   //     where: { id },

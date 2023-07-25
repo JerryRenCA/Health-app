@@ -12,4 +12,9 @@ export const usersResolver = {
       return await getUser({ id: args.id, info });
     },
   },
+  Mutation: {
+    async login() {
+      return "true";
+    },
+  },
 };

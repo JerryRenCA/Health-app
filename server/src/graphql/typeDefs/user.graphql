@@ -13,5 +13,8 @@ input UserInput {
 
 type Query {
   user(id: String!): User
-  users: [User]
+}
+
+type Mutation {
+  login(): String
 }
