@@ -1,0 +1,26 @@
+type Medication {
+  id: String!
+  name: String
+  dosage_unit: String
+  dosage: Number
+  notes: String
+  image: String
+  user_id: String
+}
+
+# type Query{
+#     medications:[Medication]
+#     medication(id:String):Medication
+# }
+
+# input MedicationInput{
+#     title:String
+#     content:String
+#     authorId:String
+# }
+
+# type Mutation{
+#     createMedication(input:MedicationInput!):Medication
+#     updateMedication(input:MedicationInput!):Medication
+#     deleteMedication(id:String!):Medication
+# }

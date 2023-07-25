@@ -1,0 +1,23 @@
+version: "3.8"
+name: graphql-infrastrucutre
+
+services:
+  postgres:
+    container_name: postgres-graphql
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    ports:
+      - 5433:5432
+    volumes:
+      - postgres-data-graphql:/var/lib/postgresql/data
+
+volumes:
+  postgres-data-dev:
+  redis-data-dev:
+
+networks:
+  default:
+    name: graphql-network

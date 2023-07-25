@@ -1,0 +1,17 @@
+type User {
+  id: String!
+  email: String!
+  username: String
+  password: String
+  #   medications: [Medication]
+}
+
+input UserInput {
+  email: String!
+  username: String!
+}
+
+type Query {
+  user(id: String!): User
+  users: [User]
+}
