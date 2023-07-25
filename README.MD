@@ -15,6 +15,8 @@ Swiper
 
 - Server
 
+* No time to do server side
+
 ```
 NodeJs
 Typescript
@@ -33,7 +35,7 @@ Docker
 
 > How to run
 
-- Server
+- Server (Not implement)
 
 ```
 S1: make compose-up
