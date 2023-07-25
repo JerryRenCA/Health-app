@@ -1,5 +1,5 @@
 > MED Manager
-> ![Thumbnail Of the project](./Documents/pics/main.png)
+> ![Thumbnail Of the project](./documents/pics/main.png)
 
 > Features
 
