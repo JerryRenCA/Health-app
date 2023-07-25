@@ -35,17 +35,17 @@ Docker
 
 > How to run
 
-- Server (Not implement)
-
-```
-S1: make compose-up
-S2: make install
-S3: make run
-```
-
 - App
 
 ```
 npm i
 npm run ios
+```
+
+- Server (Just initialized, Not implement)
+
+```
+S1: make compose-up
+S2: make install
+S3: make run
 ```

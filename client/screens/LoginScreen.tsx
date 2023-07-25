@@ -10,9 +10,10 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { img_doctor_patient_1 } from "../assets";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUser } from "../slices/authSlice";
+import { login, selectUser } from "../slices/authSlice";
 import { useNavigation } from "@react-navigation/native";
 import { MedicationScreenNavigationProp } from "../navigators/nav";
+import { Entypo } from "@expo/vector-icons";
 
 const LoginScreen = () => {
   const [username, setUsername] = React.useState("");
@@ -22,7 +23,8 @@ const LoginScreen = () => {
   const navigation = useNavigation<MedicationScreenNavigationProp>();
 
   const handleLogin = () => {
-    dispatch({ type: "LOGIN", payload: { username, password } });
+    dispatch(login({ userName: username, password }));
+
     console.log("login:", user);
     // alert(`login:${username},${password}`);
     navigation.navigate("Medication");
@@ -35,7 +37,13 @@ const LoginScreen = () => {
         resizeMode="cover"
       />
       <View className="flex-1 items-center">
-        <Text className="text-4xl font-bold py-6 text-red-600 mx-auto mt-6">
+        <TouchableOpacity
+          className="self-start p-2 bg-neutral-400 rounded-full m-2"
+          onPress={() => navigation.navigate("Home")}
+        >
+          <Entypo name="chevron-left" size={24} color="black" />
+        </TouchableOpacity>
+        <Text className="text-4xl font-bold py-6 text-red-600 mx-auto mt-2">
           Login
         </Text>
         <View className="w-full mt-6">

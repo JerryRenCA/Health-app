@@ -20,6 +20,7 @@ const RootNavigator = () => {
       />
       <NativeStackNavigator.Screen
         name="AddMedication"
+        options={{ presentation: "modal" }}
         component={AddMedicationScreen}
       />
     </NativeStackNavigator.Navigator>

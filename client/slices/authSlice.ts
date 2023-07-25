@@ -23,13 +23,14 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     login: (state, action: PayloadAction<T_AuthLoginPayload>) => {
-      state.user = {
-        id: "1",
-        name: action.payload.userName,
-        image: img_user_1,
+      return {
+        isLogin: true,
+        user: {
+          id: "1",
+          name: action.payload.userName,
+          image: img_user_1,
+        },
       };
-      state.isLogin = true;
-      return { isLogin: true, user: state.user };
     },
   },
 });
